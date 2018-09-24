@@ -1,0 +1,26 @@
+
+;; ----- smex-history -----
+(
+ byte-recompile-directory
+ byte-compile-file
+ magit-status
+ shell
+ magit-init
+ eval-buffer
+ package-list-packages
+)
+
+;; ----- smex-data -----
+(
+ (apropos . 1)
+ (eval-buffer . 25)
+ (byte-compile-file . 8)
+ (package-list-packages . 5)
+ (emacs-version . 1)
+ (org-version . 1)
+ (all-the-icons-install-fonts . 1)
+ (magit-init . 1)
+ (shell . 1)
+ (magit-status . 1)
+ (byte-recompile-directory . 1)
+)
