@@ -43,3 +43,12 @@ flycheck_*.el
 
 # directory configuration
 .dir-locals.el
+
+# recentf
+.recentf
+
+#.smex-items
+.smex-items
+
+#ido.last
+ido.last

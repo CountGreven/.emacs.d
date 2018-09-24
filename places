@@ -1,7 +1,0 @@
-;;; -*- coding: utf-8 -*-
-(("/home/greven/Cyberpunk2020/Init.org" . 1877)
- ("/home/greven/.emacs.d/customizations/elisp-editing.el" . 1289)
- ("/home/greven/.emacs.d/init.el" . 5)
- ("/usr/local/share/emacs/24.5/lisp/startup.el.gz" . 20681)
- ("/home/greven/.emacs.d/customizations/custom-org.el" . 164)
- ("/home/greven/.emacs.d/.recentf" . 864))
