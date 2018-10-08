@@ -102,3 +102,6 @@
        (define-key git-gutter+-mode-map (kbd "C-x C") 'git-gutter+-stage-and-commit)
        (define-key git-gutter+-mode-map (kbd "C-x C-y") 'git-gutter+-stage-and-commit-whole-buffer)
        (define-key git-gutter+-mode-map (kbd "C-x U") 'git-gutter+-unstage-whole-buffer)))
+
+;; Setup keybinding for git-timemachine
+(global-set-key (kbd "C-c t") 'git-timemachine)

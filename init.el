@@ -67,6 +67,7 @@
     ;; git integration
     magit
     git-gutter+
+    git-timemachine
     
     ;;puppet-mode and flymake-puppet to edit and lint puppet manifests for work
     puppet-mode
