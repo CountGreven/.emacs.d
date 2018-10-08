@@ -80,8 +80,10 @@
     org-bullets
 
     ;;All-the-icons to prettify our modeline etc.
+    all-the-icons
 
-    all-the-icons))
+    ;;Visible mark mode so we can see where we put the mark
+    visible-mark))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
