@@ -106,3 +106,7 @@
 
 ;; Setup keybinding for git-timemachine
 (global-set-key (kbd "C-c t") 'git-timemachine)
+
+;; Company mode for autocompletions
+(add-hook 'after-init-hook 'global-company-mode)
+

@@ -10,4 +10,4 @@
 (setq pdf-annot-activate-created-annotations t)
 
 ;; use normal isearch
-(define-key pdf-view-mode-map (kbd "C-s") 'isearch-forward)
+(define-key pdf-view-mode-map (kbd "C-s") 'isearch-forward) 
