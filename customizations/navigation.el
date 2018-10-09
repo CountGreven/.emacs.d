@@ -1,6 +1,8 @@
+;;; navigation.el --- Settings to make navigating more effective
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
 
+;;; Commentary:
 
 ;; "When several buffers visit identically-named files,
 ;; Emacs must give the buffers distinct names. The usual method
@@ -9,7 +11,11 @@
 ;; The forward naming method includes part of the file's directory
 ;; name at the beginning of the buffer name
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Uniquify.html
+
 (require 'uniquify)
+
+;;; Code:
+
 (setq uniquify-buffer-name-style 'forward)
 
 ;; Turn on recent file mode so that you can more easily switch to
@@ -46,7 +52,6 @@
 (defvar ido-cur-item nil)
 (defvar ido-default-item nil)
 (defvar ido-cur-list nil)
-(defvar predicate nil)
 (defvar inherit-input-method nil)
 
 ;; This enables ido in all contexts where it could be useful, not just
@@ -65,4 +70,8 @@
 (global-set-key (kbd "M-x") 'smex)
 
 ;; projectile everywhere!
-(projectile-mode 1) 
+(projectile-mode 1)
+
+(provide 'navigation)
+
+;;; navigation.el ends here

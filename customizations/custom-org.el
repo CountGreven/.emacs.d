@@ -1,5 +1,8 @@
+;;; custom-org.el --- Special configurations for org-mode
+;;; Commentary:
 ;; Enable bable for elisp, shell and python
 
+;;; Code:
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
@@ -12,8 +15,11 @@
 
 ( setq-default org-confirm-babel-evaluate nil)
 
-;; Org-bullets 
+;; Org-bullets
 ;; Make the org-mode organization of headers a bit prettier
 
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+(provide 'custom-org)
+;;; custom-org.el ends here

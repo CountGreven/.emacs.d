@@ -1,7 +1,9 @@
+;;; modeline.el --- Settings for the modeline
 
+;;; Commentary:
 ;; Configurations and Customizations for the emacs modeline to make it
-;; more ledigable and contain the information we actually find 
-;; important. 
+;; more ledigable and contain the information we actually find
+;; important.
 
 ;; Dont show minor modes in modeline since we can find them in other ways.
 ;; (setq mode-line-modes
@@ -28,9 +30,15 @@
 ;;     (let ((branchlogo (replace-regexp-in-string ":" "" vc-mode)))
 ;;           (setq vc-mode branchlogo))))
 
+;;; Code:
+
 (doom-modeline-init)
 
 
 ;; Battery indicator
 
 
+
+(provide 'modeline)
+
+;;; modeline.el ends here

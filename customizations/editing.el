@@ -1,7 +1,12 @@
-;; Customizations relating to editing a buffer.
+;;; editing.el --- Customizations relating to editing a buffer.
+
+;;; Commentary:
+
+;;; Code:
 
 ;; Key binding to use "hippie expand" for text autocompletion
 ;; http://www.emacswiki.org/emacs/HippieExpand
+
 (global-set-key (kbd "M-/") 'hippie-expand)
 
 ;; Lisp-friendly hippie expand
@@ -31,6 +36,7 @@
 ;; When you visit a file, point goes to the last place where it
 ;; was when you previously visited the same file.
 ;; http://www.emacswiki.org/emacs/SavePlace
+
 (require 'saveplace)
 (setq-default save-place t)
 ;; keep track of saved places in ~/.emacs.d/places
@@ -110,3 +116,17 @@
 ;; Company mode for autocompletions
 (add-hook 'after-init-hook 'global-company-mode)
 
+;;Yasnippet for snippets
+(yas-global-mode 1)
+
+;; Auto-yasnippet to create snippets automatically
+(global-set-key (kbd "C-c y") #'aya-create)
+(global-set-key (kbd "C-c x") #'aya-expand)
+
+;; Flycheck mode for syntax highlighting and linting
+;;(add-hook 'after-init-hook #'global-flycheck-mode)
+
+
+(provide 'editing)
+
+;;; editing.el ends here

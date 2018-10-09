@@ -1,4 +1,11 @@
+;;; misc.el --- miscelanious settings
 ;; Changes all yes/no questions to y/n type
+
+;;; Commentary:
+;; 
+
+;;; Code:
+
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; shell scripts
@@ -10,3 +17,11 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
+
+;; fixes for variable binding depth
+;; (setq max-specpdl-size 100000)
+;; (setq max-lisp-eval-depth 100000)
+
+(provide 'misc)
+
+;;; misc.el ends here

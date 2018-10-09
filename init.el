@@ -1,6 +1,12 @@
+;;; init.el ---- Grevens init.el file
+
+;;; Commentary:
+
 ;;;;
 ;; Packages
 ;;;;
+
+;;; Code:
 
 ;; Define package repositories
 
@@ -69,14 +75,14 @@
     git-gutter+
     git-timemachine
     
-    ;;puppet-mode and flymake-puppet to edit and lint puppet manifests for work
+    ;; puppet-mode and flymake-puppet to edit and lint puppet manifests for work
     puppet-mode
     flymake-puppet
 
-    ;;pdf-tools to enhance pdf capabilities 
+    ;; pdf-tools to enhance pdf capabilities
     pdf-tools
 
-    ;;Org-bullets to make our .org files a bit prettier
+    ;; Org-bullets to make our .org files a bit prettier
     org-bullets
 
     ;;All-the-icons to prettify our modeline etc.
@@ -85,7 +91,16 @@
     ;;Visible mark mode so we can see where we put the mark
     visible-mark
     ;; Company mode for autocompletion
-    company))
+    company
+
+    ;;Yasnippet, to have automatic snippet completion
+    yasnippet
+    yasnippet-snippets
+    auto-yasnippet
+
+    ;;Flycheck mode for syntax highlighting and linting
+   flycheck))
+
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -118,7 +133,6 @@
 
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
-
 ;;;;
 ;; Customization
 ;;;;
@@ -128,7 +142,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
-;; Set file for emacs built-in customize settings. 
+;; Set file for emacs built-in customize settings.
 ;; This way we can byte compile our init.el and still have customize
 ;; make changes that will be read at startup.
 
@@ -163,6 +177,8 @@
 
 (load "elisp-editing")
 
+;; Enhancements to org-mode
+
 (load "custom-org")
 
 ;; Langauage-specific
@@ -170,3 +186,8 @@
 (load "setup-clojure")
 
 (load "setup-js")
+
+;; Footer
+
+(provide 'init)
+;;; init.el ends here
