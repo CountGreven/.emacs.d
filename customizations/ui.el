@@ -56,7 +56,7 @@
 (blink-cursor-mode 0)
 
 ;; Visible mark-mode so we can see where we put our mark in a buffer
-(visible-mark-mode 1)
+(global-visible-mark-mode 1)
 ;; full path in title bar
 (setq-default frame-title-format "%b (%f)")
 

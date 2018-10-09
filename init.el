@@ -78,7 +78,7 @@
     ;; puppet-mode and flymake-puppet to edit and lint puppet manifests for work
     puppet-mode
     flymake-puppet
-
+    
     ;; pdf-tools to enhance pdf capabilities
     pdf-tools
 
@@ -100,7 +100,8 @@
 
     ;;Flycheck mode for syntax highlighting and linting
     flycheck
-    flycheck-yamllint))
+    flycheck-yamllint
+    flycheck-clojure))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
