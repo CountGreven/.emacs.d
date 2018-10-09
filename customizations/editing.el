@@ -117,7 +117,7 @@
 (global-set-key (kbd "C-c x") #'aya-expand)
 
 ;; Flycheck mode for syntax highlighting and linting
-;;(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 
 (provide 'editing)
