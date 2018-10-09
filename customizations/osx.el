@@ -17,6 +17,14 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'nil)
 
+;; fix weird os x kill error
+(defun ns-get-pasteboard ()
+  "Returns the value of the pasteboard, or nil for unsupported formats."
+  (condition-case nil
+      (ns-get-selection-internal 'CLIPBOARD)
+    (quit nil)))
+
+
 (provide 'osx)
 
 ;;; osx.el ends here

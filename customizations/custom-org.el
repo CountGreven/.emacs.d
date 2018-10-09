@@ -13,7 +13,7 @@
 ;; This is potentially dangerous. You should never evaluate code
 ;; if you do not understand what it does.
 
-( setq-default org-confirm-babel-evaluate nil)
+(setq-default org-confirm-babel-evaluate nil)
 
 ;; Org-bullets
 ;; Make the org-mode organization of headers a bit prettier
