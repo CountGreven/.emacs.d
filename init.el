@@ -99,20 +99,8 @@
     auto-yasnippet
 
     ;;Flycheck mode for syntax highlighting and linting
-   flycheck))
-
-
-;; On OS X, an Emacs instance started from the graphical user
-;; interface will have a different environment than a shell in a
-;; terminal window, because OS X does not run a shell during then
-;; login. Obviously this will lead to unexpected results when
-;; calling external utilities like make from Emacs.
-;; This library works around this problem by copying important
-;; environment variables from the user's shell.
-;; https://github.com/purcell/exec-path-from-shell
-
-(if (eq system-type 'darwin)
-    (add-to-list 'my-packages 'exec-path-from-shell))
+    flycheck
+    flycheck-yamllint))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -141,7 +129,7 @@
 ;; below, Emacs knows where to look for the corresponding file.
 
 (add-to-list 'load-path "~/.emacs.d/customizations")
-
+(add-to-list 'load-path "~/.emacs.d/customizations/modeline")
 ;; Set file for emacs built-in customize settings.
 ;; This way we can byte compile our init.el and still have customize
 ;; make changes that will be read at startup.
@@ -163,6 +151,7 @@
 ;; some user interface elements
 
 (load "ui")
+(load "greven-modeline")
 (load "modeline")
 
 ;; These customizations make editing a bit nicer.
@@ -186,6 +175,10 @@
 (load "setup-clojure")
 
 (load "setup-js")
+
+;; OS specific
+(if (eq system-type 'darwin)
+    (load "osx"))
 
 ;; Footer
 

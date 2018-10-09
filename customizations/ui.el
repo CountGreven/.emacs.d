@@ -66,6 +66,4 @@
 ;; no bell
 (setq ring-bell-function 'ignore)
 
-;; Set cmd as meta in osX
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier 'nil)
+
